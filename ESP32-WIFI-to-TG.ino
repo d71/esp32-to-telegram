@@ -95,7 +95,6 @@ void work_mode(){
   Serial.println("Connect to WIFI:  " + router_ssid + "/" + router_password + " ");
 
   WiFi.begin(router_ssid, router_password);
-  //WiFi.begin("Lan3-2G", "imhotep5");
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -284,10 +283,6 @@ void SendBot(String status){
     return;
   }
 
-  
-
-  //1961828605:AAGeZ8cNPsh1cuxLoN2pfv_XLLtqN65u1CE
-  //1903303223
 
   String API_URL="https://api.telegram.org/bot"+tg_bot+"/sendMessage?chat_id="+chat_id+"&text=port "+status;
 
